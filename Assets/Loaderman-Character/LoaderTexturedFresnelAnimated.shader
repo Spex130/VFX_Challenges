@@ -1,4 +1,4 @@
-﻿Shader "HarryChallenge/Fresnel/LoaderTexturedFresnel" {
+﻿Shader "HarryChallenge/Fresnel/LoaderTexturedFresnelAnimated" {
 	//show values to edit in inspector
 	Properties{
 		_Color("Tint", Color) = (0, 0, 0, 1)
@@ -7,7 +7,7 @@
 		_Smoothness("Smoothness", Range(0, 1)) = 0
 		_Metallic("Metalness", Range(0, 1)) = 0
 		_Emission("Emission", Range(0, 1)) = 0
-
+		_TimeScale("Scroll Speed", Range(-10, 10)) = 1
 		_FresnelColor("Fresnel Color", Color) = (1,1,1,1)
 		[PowerSlider(4)] _FresnelExponent("Fresnel Exponent", Range(0.25, 8)) = 1
 		_FresnelAdditive("Fresnel Additive", Float) = 1
@@ -33,6 +33,7 @@
 			half _TexBright;
 			half _Metallic;
 			half _Emission;
+			half _TimeScale;
 
 			float3 _FresnelColor;
 			float _FresnelExponent;
@@ -49,7 +50,7 @@
 			//the surface shader function which sets parameters the lighting function then uses
 			void surf(Input i, inout SurfaceOutputStandard o) {
 				//sample and tint albedo texture
-				fixed4 col = tex2D(_MainTex, i.uv_MainTex);
+				fixed4 col = tex2D(_MainTex, i.uv_MainTex + _Time.x * _TimeScale);
 				col *= _Color;
 				o.Albedo = col.r + _TexBright;
 				 
