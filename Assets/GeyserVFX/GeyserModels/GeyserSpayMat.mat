@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AirDash
-  m_Shader: {fileID: 4800000, guid: 55bc6d10456f06f43a6c26f4e9bb7ce1, type: 3}
-  m_ShaderKeywords: 
+  m_Name: GeyserSpayMat
+  m_Shader: {fileID: 4800000, guid: 7bf5050d13c7ea54485b1ca6e7b19e98, type: 3}
+  m_ShaderKeywords: _ISPARTICLESHADER_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 1d6b540ee55a37d4a9848a2688b8bbb0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 34fe82b7b355ba44cbba278405295719, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -55,30 +55,20 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SecondTex:
-        m_Texture: {fileID: 2800000, guid: 9ac6a50f4d41c934e82efaa1a5fb4461, type: 3}
-        m_Scale: {x: 0.1, y: 0.1}
-        m_Offset: {x: 0, y: 0}
-    - _SecondText:
-        m_Texture: {fileID: 2800000, guid: a21de43fb00dd994bb4ff65cac8583ba, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _AlphaPow: 1.25
-    - _AlphaStart: 0.417
     - _BumpScale: 1
-    - _ColorBoost: 1.64
+    - _ClipRange: 0.036
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _IsParticleShader: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _ScrollSpeed: 69.27
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
